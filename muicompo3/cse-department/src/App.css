@@ -1,0 +1,380 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f5f7fb;
+}
+
+
+/* ================= DRAWER ================= */
+
+.drawer {
+  width: 280px;
+  padding: 20px;
+}
+
+.drawer-title {
+  padding: 15px 10px;
+  font-weight: bold;
+  color: #0d47a1;
+}
+
+.drawer-button {
+  justify-content: flex-start !important;
+  padding: 13px !important;
+}
+
+
+/* ================= HERO ================= */
+
+.hero {
+  min-height: 560px;
+
+  background:
+    linear-gradient(
+      rgba(5, 30, 70, 0.78),
+      rgba(5, 30, 70, 0.78)
+    ),
+    url("https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1600&q=80");
+
+  background-size: cover;
+  background-position: center;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: white;
+  text-align: center;
+
+  padding: 60px 20px;
+}
+
+.hero-content {
+  max-width: 900px;
+}
+
+.hero-title {
+  font-weight: bold !important;
+  font-size: 55px !important;
+  margin-top: 25px !important;
+  line-height: 1.1 !important;
+}
+
+.hero-text {
+  margin-top: 25px !important;
+  line-height: 1.6 !important;
+}
+
+/* =====================================================
+   PLACED STUDENTS MOVING WINDOW
+===================================================== */
+
+.placement-ticker {
+  display: flex;
+  width: 100%;
+  height: 65px;
+
+  background: #092b61;
+  color: white;
+
+  overflow: hidden;
+}
+
+
+/* ================= TICKER TITLE ================= */
+
+.ticker-title {
+  min-width: 220px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #1565c0;
+
+  font-weight: bold;
+  font-size: 16px;
+
+  padding: 0 20px;
+
+  z-index: 2;
+
+  box-shadow: 5px 0 15px rgba(0, 0, 0, 0.15);
+}
+
+
+/* ================= TICKER AREA ================= */
+
+.ticker-wrapper {
+  flex: 1;
+
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+
+  position: relative;
+}
+
+
+/* ================= MOVING CONTENT ================= */
+
+.ticker-content {
+  display: flex;
+  align-items: center;
+
+  white-space: nowrap;
+
+  animation: tickerMove 30s linear infinite;
+}
+
+
+/* ================= EACH STUDENT ================= */
+
+.ticker-content span {
+  display: inline-block;
+
+  margin-right: 70px;
+
+  font-size: 16px;
+
+  font-weight: 500;
+}
+
+
+/* ================= CONTINUOUS MOVEMENT ================= */
+
+@keyframes tickerMove {
+
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+
+}
+
+
+/* ================= HOVER PAUSE ================= */
+
+.ticker-content:hover {
+  animation-play-state: paused;
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 600px) {
+
+  .placement-ticker {
+    height: 55px;
+  }
+
+  .ticker-title {
+    min-width: 145px;
+
+    font-size: 12px;
+
+    padding: 0 10px;
+  }
+
+  .ticker-content {
+    animation-duration: 22s;
+  }
+
+  .ticker-content span {
+    font-size: 13px;
+
+    margin-right: 40px;
+  }
+
+}
+
+/* ================= SECTIONS ================= */
+
+.section {
+  padding: 80px 0;
+}
+
+.light-section {
+  background: #eef3f9;
+}
+
+.section-title {
+  font-weight: bold !important;
+  margin-bottom: 40px !important;
+  color: #092b61;
+}
+
+.paragraph {
+  line-height: 1.8 !important;
+  color: #555;
+  margin-bottom: 20px !important;
+}
+
+
+/* ================= FACULTY ================= */
+
+.faculty-card {
+  padding: 30px 15px;
+  text-align: center;
+  min-height: 300px;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.faculty-card .MuiTypography-h6 {
+  margin-top: 15px;
+}
+
+
+/* ================= PLACEMENT ================= */
+
+.placement-section {
+  background: #092b61;
+  color: white;
+  padding: 90px 0;
+}
+
+.placement-title {
+  color: white !important;
+  font-weight: bold !important;
+  margin-bottom: 45px !important;
+}
+
+.placement-section .MuiCard-root {
+  color: #222;
+}
+
+
+/* ================= PAGINATION ================= */
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+
+/* ================= FORM ================= */
+
+.form-container {
+  max-width: 700px;
+  margin: auto;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  background: white;
+  padding: 35px;
+
+  border-radius: 12px;
+
+  box-shadow:
+    0 5px 25px rgba(0, 0, 0, 0.08);
+}
+
+
+/* ================= FOOTER ================= */
+
+.footer {
+  background: #071a38;
+  color: white;
+  padding: 60px 0;
+}
+
+.footer .MuiTypography-root {
+  margin-bottom: 12px;
+}
+
+
+/* ================= COPYRIGHT ================= */
+
+.copyright {
+  background: #031025;
+  color: #b7c3d6;
+  text-align: center;
+  padding: 20px;
+}
+
+
+/* ================= FAB ================= */
+
+.fab {
+  position: fixed !important;
+  right: 25px;
+  bottom: 25px;
+}
+
+
+/* ================= SPEED DIAL ================= */
+
+.speed-dial {
+  position: fixed !important;
+  right: 25px;
+  bottom: 90px;
+}
+
+
+/* ================= CARDS ================= */
+
+.MuiCard-root {
+  transition: 0.3s;
+}
+
+.MuiCard-root:hover {
+  transform: translateY(-5px);
+
+  box-shadow:
+    0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+
+  .hero-title {
+    font-size: 42px !important;
+  }
+
+  .section {
+    padding: 60px 0;
+  }
+
+}
+
+
+@media (max-width: 600px) {
+
+  .hero {
+    min-height: 500px;
+  }
+
+  .hero-title {
+    font-size: 34px !important;
+  }
+
+  .hero-text {
+    font-size: 16px !important;
+  }
+
+  .drawer {
+    width: 250px;
+  }
+
+}
